@@ -1,0 +1,7 @@
+{
+  "generator-react-webpack": {
+    "appName": "svPlayer",
+    "style": "less",
+    "postcss": true
+  }
+}
