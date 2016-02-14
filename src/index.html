@@ -8,9 +8,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 </head>
 <body>
-  <div id="app">APPLICATION CONTENT</div>
 
-  <script>__REACT_DEVTOOLS_GLOBAL_HOOK__ = parent.__REACT_DEVTOOLS_GLOBAL_HOOK__</script>
-  <script type="text/javascript" src="assets/app.js"></script>
+<img id="logo" src="images/logo.png" alt="logo Slobodny vysielac">
+
+<!--Stream player-->
+<script type="text/javascript" src="//hosted.musesradioplayer.com/mrp.js"></script>
+<script type="text/javascript">MRP.insert({
+  'url': 'http://78.47.79.190:8002/start/vysielac',
+  'lang': 'auto',
+  'codec': 'aac',
+  'volume': 80,
+  'introurl': '',
+  'fallback': '',
+  'autoplay': false,
+  'jsevents': false,
+  'buffering': 5,
+  'title': 'Slobodný vysielač - ',
+  'welcome': '',
+  'bgcolor': '#FFFFFF',
+  'wmode': 'transparent',
+  'skin': 'oldstereo',
+  'width': 318,
+  'height': 130
+});</script>
+
+
+<div id="app">APPLICATION CONTENT</div>
+
+<script>__REACT_DEVTOOLS_GLOBAL_HOOK__ = parent.__REACT_DEVTOOLS_GLOBAL_HOOK__</script>
+<script type="text/javascript" src="assets/app.js"></script>
 </body>
 </html>

@@ -1,7 +1,16 @@
 /* Base Application Styles */
 body {
-  color: #fff;
-  background: #222;
+  background: #FFFFFF;
+}
+
+body #logo {
+  margin: 40px auto;
+  display: block;
+}
+
+body #MRPObject {
+  margin: 40px auto;
+  display: block;
 }
 
 .index img {
