@@ -9,6 +9,8 @@ let defaultSettings = require('./defaults');
 // Add needed plugins here
 let BowerWebpackPlugin = require('bower-webpack-plugin');
 
+let WebpackStripLoader = require('strip-loader');
+
 let config = Object.assign({}, baseConfig, {
   entry: path.join(__dirname, '../src/index'),
   cache: false,
@@ -36,6 +38,19 @@ config.module.loaders.push({
   include: [].concat(
     config.additionalPaths,
     [ path.join(__dirname, '/../src') ]
+  )
+});
+
+// StripLoader
+/**
+ * Pri loadovani require modulov vyreze z zdroj. kodu tieto metody, uzitocne pre dist
+ */
+config.module.loaders.push({
+  test: /\.(js|jsx|es6)$/,
+  loader: WebpackStripLoader.loader('console.log', 'console.warn', 'console.info', 'console.error', 'alert'),
+  include: [].concat(
+    config.additionalPaths,
+    [path.join(__dirname, '/../src')]
   )
 });
 
