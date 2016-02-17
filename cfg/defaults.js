@@ -46,6 +46,10 @@ function getDefaultModules() {
       },
       {
         test: /\.(png|jpg|gif|woff|woff2)$/,
+        /**
+         * ?limit znamena ze ak nacita obrazok kt velkost je mensia ako 8192kB tak tento obrazok sa da ako Base64 to
+         * stranky
+         */
         loader: 'url-loader?limit=8192'
       }
     ]
