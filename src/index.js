@@ -1,4 +1,6 @@
-var $ = require('jquery');
+var $ = window.jQuery = require('jquery');
+require('bootstrap/dist/css/bootstrap.css');
+require('bootstrap/dist/js/bootstrap.js');
 
 import 'core-js/fn/object/assign';
 import React from 'react';

@@ -45,7 +45,10 @@ function getDefaultModules() {
         loader: 'style-loader!css-loader!autoprefixer-loader!stylus-loader'
       },
       {
-        test: /\.(png|jpg|gif|woff|woff2)$/,
+        /**
+         * Kvoli boostrapu som musel pre loader pridat podporu SVG|TTF|EOT
+         */
+        test: /\.(png|jpg|gif|svg|woff|woff2|ttf|eot)$/,
         /**
          * ?limit znamena ze ak nacita obrazok kt velkost je mensia ako 8192kB tak tento obrazok sa da ako Base64 to
          * stranky
