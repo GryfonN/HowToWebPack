@@ -1,4 +1,3 @@
-var $ = require('jquery');
 require('normalize.css');
 require('styles/App.css');
 
@@ -6,11 +5,6 @@ import React from 'react';
 import Logo from './Logo.react.jsx';
 
 let yeomanImage = require('../images/yeoman.png');
-
-console.log("test MAIN");
-$(function () {
-  console.warn('jquery works');
-});
 
 class AppComponent extends React.Component {
   render() {
