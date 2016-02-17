@@ -12,6 +12,11 @@ module.exports = {
     filename: 'app.js',
     publicPath: defaultSettings.publicPath
   },
+  externals: {
+    // require("jquery") is external and available
+    //  on the global var jQuery
+    "jquery": "jQuery"
+  },
   devServer: {
     contentBase: './src/',
     historyApiFallback: true,

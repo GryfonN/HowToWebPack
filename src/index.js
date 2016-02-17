@@ -1,4 +1,4 @@
-var $ = window.jQuery = require('jquery');
+var $ = require('jquery');
 require('bootstrap/dist/css/bootstrap.css');
 require('bootstrap/dist/js/bootstrap.js');
 
