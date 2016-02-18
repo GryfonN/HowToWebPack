@@ -1,6 +1,7 @@
-var $ = require('jquery');
-require('bootstrap/dist/css/bootstrap.css');
-require('bootstrap/dist/js/bootstrap.js');
+var $ = window.jQuery = require('jquery');
+//Alias v base webpack conf
+require('@semantic/semantic.min.css');
+require('@semantic/semantic.min.js');
 
 import 'core-js/fn/object/assign';
 import React from 'react';

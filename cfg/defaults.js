@@ -46,7 +46,7 @@ function getDefaultModules() {
       },
       {
         /**
-         * Kvoli boostrapu som musel pre loader pridat podporu SVG|TTF|EOT
+         * Kvoli semantic som musel pre loader pridat podporu SVG|TTF|EOT
          */
         test: /\.(png|jpg|gif|svg|woff|woff2|ttf|eot)$/,
         /**

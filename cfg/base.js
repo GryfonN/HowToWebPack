@@ -12,11 +12,6 @@ module.exports = {
     filename: 'app.js',
     publicPath: defaultSettings.publicPath
   },
-  externals: {
-    // require("jquery") is external and available
-    //  on the global var jQuery
-    "jquery": "jQuery"
-  },
   devServer: {
     contentBase: './src/',
     historyApiFallback: true,
@@ -37,7 +32,8 @@ module.exports = {
       sources: `${ defaultSettings.srcPath }/sources/`,
       stores: `${ defaultSettings.srcPath }/stores/`,
       styles: `${ defaultSettings.srcPath }/styles/`,
-      config: `${ defaultSettings.srcPath }/config/` + process.env.REACT_WEBPACK_ENV
+      config: `${ defaultSettings.srcPath }/config/` + process.env.REACT_WEBPACK_ENV,
+      '@semantic': `${ defaultSettings.srcPath }/../semantic/dist/`
     }
   },
   module: {},

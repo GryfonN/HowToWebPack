@@ -3,8 +3,7 @@ require('styles/App.css');
 
 import React from 'react';
 import Logo from './Logo.react.jsx';
-import BPopupTest from './BootstrapPopupTest.react.jsx';
-import BButtonTest from './BootstrapButtonTest.react.jsx';
+import SemanticUiTest from './SemanticUiTest.react.js';
 
 
 let yeomanImage = require('../images/yeoman.png');
@@ -15,10 +14,7 @@ class AppComponent extends React.Component {
       <div className="index">
         <Logo/>
         <img src={yeomanImage} alt="Yeoman Generator"/>
-        <BButtonTest/>
-        <br/>
-        <BPopupTest/>
-        <div className="notice">Please edit <code>src/components/Main.js</code> to get started!</div>
+        <SemanticUiTest/>
       </div>
     );
   }
