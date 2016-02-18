@@ -1,6 +1,6 @@
 {
   "generator-react-webpack": {
-    "appName": "svPlayer",
+    "appName": "HowToWebPack",
     "style": "less",
     "postcss": true
   }
