@@ -18,7 +18,12 @@ module.exports = {
     hot: true,
     port: defaultSettings.port,
     publicPath: defaultSettings.publicPath,
-    noInfo: false
+    noInfo: false,
+    proxy: {
+      '/rest/devel/path/*': {
+        target: 'http://localhost:3000'
+      }
+    }
   },
   resolve: {
     extensions: [
