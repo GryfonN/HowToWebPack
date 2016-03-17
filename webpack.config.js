@@ -17,14 +17,6 @@ if(args._.length > 0 && args._.indexOf('start') !== -1) {
 }
 process.env.REACT_WEBPACK_ENV = env;
 
-// Get available configurations
-const configs = {
-  base: require(path.join(__dirname, 'cfg/base')),
-  dev: require(path.join(__dirname, 'cfg/dev')),
-  dist: require(path.join(__dirname, 'cfg/dist')),
-  test: require(path.join(__dirname, 'cfg/test'))
-};
-
 /**
  * Build the webpack configuration
  * @param  {String} wantedEnv The wanted environment
@@ -33,7 +25,10 @@ const configs = {
 function buildConfig(wantedEnv) {
   let isValid = wantedEnv && wantedEnv.length > 0 && allowedEnvs.indexOf(wantedEnv) !== -1;
   let validEnv = isValid ? wantedEnv : 'dev';
-  return configs[validEnv];
+
+  let config = require(path.join(__dirname, 'cfg/' + validEnv));
+  console.log(config);
+  return config;
 }
 
 module.exports = buildConfig(env);
